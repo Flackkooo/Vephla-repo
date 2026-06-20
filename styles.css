@@ -1,0 +1,159 @@
+:root {
+  --primary-spacing: 1.5rem;
+  --secondary-spacing: 2rem;
+  --primary-color: blue;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQziGPo4b27-vpXsJYQl1-tIEeB7l8Xig8nBrbgFtyz_A&s=10)
+    no-repeat center / cover fixed;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.navbar {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-links {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  gap: var(--primary-spacing);
+}
+
+.nav-links li a {
+  display: block;
+  font-size: var(--primary-spacing);
+  text-decoration: none;
+  color: white;
+  padding: 14px 16px;
+}
+
+.nav-links li a:hover {
+  background-color: rgb(73, 68, 68);
+  transition: 0.5s;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: rgb(244, 214, 21);
+  min-height: 85vh;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+h1 {
+  font-size: 5rem;
+  font-family: "Times New Roman", Times, serif;
+  letter-spacing: var(--primary-spacing);
+}
+
+button {
+  padding: 1rem;
+  width: 150px;
+  background-color: var(--primary-color);
+  border: none;
+  outline: none;
+  margin-top: 1rem;
+  font-size: var(--primary-spacing);
+  color: white;
+}
+
+button:hover {
+  background-color: aqua;
+  color: var(--primary-color);
+  transition: 0.7s;
+}
+
+@media (max-width: 1240px) {
+  h2 {
+    font-size: 3rem;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 954px) {
+  h2 {
+    font-size: 2rem;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  .nav-links li a {
+    font-size: 1rem;
+  }
+
+  button {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 560px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .nav-links li a {
+    font-size: 0.8rem;
+    padding: 10px;
+  }
+
+  .navbar {
+    justify-content: center;
+  }
+
+  .nav-links {
+    gap: 1rem;
+  }
+
+  button {
+    font-size: 0.8rem;
+    width: 100px;
+  }
+}
+
+@media (max-width: 410px) {
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    letter-spacing: 5px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+  }
+
+  .navbar {
+    position: relative;
+  }
+}
